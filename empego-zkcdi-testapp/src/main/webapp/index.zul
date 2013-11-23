@@ -1,0 +1,15 @@
+<?page title="empego-zkcdi" contentType="text/html;charset=UTF-8"?>
+<?variable-resolver class="net.empego.zkcdi.util.DelegatingVariableResolver"?>
+<zk>
+	<window id="helloWindow" title="empego-zkcdi testapplication" border="normal"
+		width="460px" apply="net.empego.testwebapp.CdiTestComposer">
+		<textbox id="guestName" width="300px"
+			value="Press Button to update scopes" />
+		<button id="sayHelloBtn" label="Update Scoped Labels" />
+		<vbox>
+			<label id="sessionLabel" value="${sessionScopedObject.created}"></label>
+			<label id="desktopLabel" value="${desktopScopedObject.created}"></label>
+			<label id="executionLabel" value="${executionScopedObject.created}"></label>
+		</vbox>
+	</window>
+</zk>
